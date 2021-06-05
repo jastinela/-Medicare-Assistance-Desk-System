@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charSet="UTF-8"/>
+    <title>Figma Prototype Export</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /* OWN CSS */
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+
+        li:first-child {
+            margin-bottom: 8pt;
+        }
+
+        #helper {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            bottom: 16pt;
+            right: 16pt;
+            padding: 8pt;
+            border-radius: 4pt;
+        }
+
+        #helper svg {
+            margin-right: 4pt;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+      const frames = {"1w2":{"id":"1w2","name":"Login-Screen","clickableChildren":{"1w17":{"name":"Forgot Password?","destination":"17w9","x":102,"y":649,"w":202,"h":25,"rotation":0},"215w3":{"name":"Component 1","destination":"20w74","x":142,"y":551,"w":122,"h":26,"rotation":0},"215w4":{"name":"Component 2","destination":"9w20","x":142,"y":589,"w":122,"h":26,"rotation":0}}},"17w9":{"id":"17w9","name":"Forgot-Password-Screen","clickableChildren":{"17w22":{"name":"left-arrow 1","destination":"9w20","x":15,"y":172,"w":38,"h":38,"rotation":0},"216w96":{"name":"Component 1","destination":"265w91","x":110,"y":661,"w":199,"h":25,"rotation":0}}},"9w20":{"id":"9w20","name":"Sign-Up-Screen","clickableChildren":{"12w8":{"name":"Login","destination":"1w2","x":270,"y":747,"w":63,"h":23,"rotation":0},"20w32":{"name":"left-arrow 2","destination":"1w2","x":14,"y":134,"w":38,"h":38,"rotation":0},"215w8":{"name":"Component 3","destination":"12w10","x":114,"y":686,"w":186,"h":26,"rotation":0}}},"12w10":{"id":"12w10","name":"Frame-4","clickableChildren":{}},"265w91":{"id":"265w91","name":"Frame-12","clickableChildren":{}},"20w74":{"id":"20w74","name":"Home-Screen","clickableChildren":{"20w140":{"name":"image 14","destination":"20w344","x":349,"y":191,"w":44,"h":44,"rotation":0},"20w122":{"name":"image 9","destination":"20w367","x":49,"y":460,"w":103,"h":93,"rotation":0},"20w126":{"name":"image 10","destination":"20w147","x":266,"y":321,"w":97,"h":84,"rotation":0},"20w118":{"name":"image 8","destination":"176w0","x":59,"y":322,"w":85,"h":84,"rotation":0},"20w136":{"name":"image 13","destination":"20w305","x":268,"y":460,"w":93,"h":96,"rotation":0},"20w359":{"name":"image 13","destination":"20w334","x":67,"y":620,"w":85,"h":88,"rotation":0},"28w31":{"name":"image 17","destination":"20w18","x":272,"y":616,"w":86,"h":86,"rotation":0},"215w24":{"name":"Component 3","destination":"1w2","x":121,"y":758,"w":186,"h":26,"rotation":0}}},"20w344":{"id":"20w344","name":"Settings","clickableChildren":{"20w362":{"name":"About Us","destination":"164w236","x":147,"y":383,"w":107,"h":22,"rotation":0},"20w354":{"name":"left-arrow 2","destination":"20w74","x":20,"y":175,"w":38,"h":38,"rotation":0},"20w364":{"name":"image 16","destination":"164w236","x":90,"y":381,"w":23,"h":24,"rotation":0}}},"164w236":{"id":"164w236","name":"About-Us","clickableChildren":{"164w246":{"name":"left-arrow 2","destination":"20w344","x":20,"y":175,"w":38,"h":38,"rotation":0}}},"20w367":{"id":"20w367","name":"Patients-Vital-Signs","clickableChildren":{"216w99":{"name":"Component 5","destination":"268w92","x":144,"y":757,"w":119,"h":25,"rotation":0},"20w376":{"name":"left-arrow 3","destination":"20w74","x":20,"y":175,"w":38,"h":38,"rotation":0}}},"268w92":{"id":"268w92","name":"Frame-16","clickableChildren":{}},"20w147":{"id":"20w147","name":"Travel-History","clickableChildren":{"20w356":{"name":"left-arrow 4","destination":"20w74","x":24,"y":175,"w":38,"h":38,"rotation":0},"216w68":{"name":"Component 3","destination":"20w212","x":130,"y":761,"w":154,"h":25,"rotation":0}}},"20w212":{"id":"20w212","name":"Travel-History-2","clickableChildren":{"20w357":{"name":"left-arrow 5","destination":"20w147","x":24,"y":155,"w":38,"h":38,"rotation":0},"216w72":{"name":"Component 3","destination":"20w147","x":31,"y":765,"w":119,"h":25,"rotation":0},"216w80":{"name":"Component 4","destination":"20w266","x":265,"y":767,"w":119,"h":25,"rotation":0}}},"20w266":{"id":"20w266","name":"Travel-History-3","clickableChildren":{"20w358":{"name":"left-arrow 6","destination":"20w212","x":28,"y":171,"w":38,"h":38,"rotation":0},"216w84":{"name":"Component 5","destination":"20w212","x":32,"y":768,"w":119,"h":25,"rotation":0},"216w88":{"name":"Component 6","destination":"268w79","x":274,"y":770,"w":119,"h":25,"rotation":0}}},"268w79":{"id":"268w79","name":"Frame-15","clickableChildren":{}},"176w0":{"id":"176w0","name":"Patient-s-Information","clickableChildren":{"176w22":{"name":"left-arrow 5","destination":"20w74","x":20,"y":162,"w":38,"h":38,"rotation":0},"215w28":{"name":"Component 3","destination":"267w87","x":140,"y":766,"w":134,"h":26,"rotation":0}}},"267w87":{"id":"267w87","name":"Frame-14","clickableChildren":{}},"20w305":{"id":"20w305","name":"Daily-Covid-19-Update-Screen","clickableChildren":{"20w353":{"name":"left-arrow 1","destination":"20w74","x":25,"y":175,"w":38,"h":38,"rotation":0},"291w83":{"name":"Component 4","destination":"185w33","x":49,"y":728,"w":306,"h":42,"rotation":0}}},"185w33":{"id":"185w33","name":"Daily-Covid-19-Update-Screen","clickableChildren":{"185w42":{"name":"left-arrow 1","destination":"20w305","x":25,"y":175,"w":38,"h":38,"rotation":0}}},"20w334":{"id":"20w334","name":"Patients-Profile-list-screen","clickableChildren":{"20w355":{"name":"left-arrow 3","destination":"20w74","x":20,"y":157,"w":38,"h":38,"rotation":0}}},"20w18":{"id":"20w18","name":"Edit-Profile-Screen","clickableChildren":{"20w27":{"name":"left-arrow 1","destination":"20w74","x":15,"y":172,"w":38,"h":38,"rotation":0},"215w20":{"name":"Component 4","destination":"267w80","x":92,"y":741,"w":217,"h":24,"rotation":0}}},"267w80":{"id":"267w80","name":"Frame-13","clickableChildren":{}}};
+      const startFrameId = {"start":"1w2"};
+      const retina = true;
+      window.onload = function () {
+        // name is wrong, need to add the index!
+        let oneX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + ".png";
+        document.getElementById("content").src = oneX;
+        document.getElementById("content").className = frames[startFrameId["start"]].id;
+        if (retina === true) {
+          let twoX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + "@2x.png 2x";
+          document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+        }
+        renderClickableAreas();
+      };
+
+      // Hide helper after 5 seconds
+      window.addEventListener("load", function () {
+        document.getElementById("helper").classList.remove("hidden");
+        setTimeout(function () {
+          document.getElementById("helper").className = 'hidden';
+        }, 5000);
+      });
+
+      // listen to keydown events
+      window.addEventListener("keydown", event => {
+        // R to go back to start
+        if (event.isComposing || KeyboardEvent.keyCode === 82) {
+          let oneX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + ".png";
+          document.getElementById("content").src = oneX;
+          document.getElementById("content").className = frames[startFrameId["start"]].id;
+          if (retina === true) {
+            let twoX = "images/" + frames[startFrameId["start"]].id + "-" + frames[startFrameId["start"]].name + "@2x.png 2x";
+            document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+          }
+          document.documentElement.scrollTop = 0;
+        }
+        // H to hide the interface
+        if (event.isComposing || KeyboardEvent.keyCode === 72) {
+          if (document.getElementById("helper").className !== 'hidden') {
+            document.getElementById("helper").className = 'hidden';
+          } else {
+            document.getElementById("helper").className = '';
+          }
+        }
+      });
+      
+      function renderClickableAreas() {
+        let clickableDiv = document.getElementById("clickables");
+        if (clickableDiv.children.length > 0) {
+          clickableDiv.innerHTML = '';
+        }
+        
+        let currentFrame = document.getElementById("content").className;
+        for (let i = 0; i < Object.keys(frames[currentFrame].clickableChildren).length; i++) {
+          var newContent = document.createElement('div');
+          let layerName = Object.keys(frames[currentFrame].clickableChildren)[i];
+          let layer = frames[currentFrame].clickableChildren[layerName];
+          
+          if (layer.destination) {
+          newContent.style.position = 'absolute';
+          newContent.className = layerName;
+          newContent.style.width = layer.w + 'px';
+          newContent.style.height = layer.h + 'px';
+          newContent.style.top = layer.y + 'px';
+          newContent.style.left = layer.x + 'px';
+          newContent.style.cursor = 'pointer';
+          if (layer.parent && frames[currentFrame].clickableChildren[layer.parent]) {
+            let combinedY = layer.y + frames[currentFrame].clickableChildren[layer.parent].y; 
+            let combinedX = layer.x + frames[currentFrame].clickableChildren[layer.parent].x; 
+          newContent.style.top = combinedY + 'px';
+          newContent.style.left = combinedX + 'px';     
+          }
+          newContent.setAttribute("onclick", "navigateTo('"+layer.destination+"')");
+          
+          clickableDiv.appendChild(newContent);
+          }
+        }
+      }
+
+    function navigateTo(newFrameId) {
+      let oneX = "images/" + newFrameId + "-" + frames[newFrameId].name + ".png";
+      document.getElementById("content").className = newFrameId;
+      document.getElementById("content").src = oneX;
+      document.documentElement.scrollTop = 0;
+      if (retina === true) {
+        let twoX = "images/" + newFrameId + "-" + frames[newFrameId].name + "@2x.png 2x";
+        document.getElementById("content").srcset = oneX + " 1x, " + twoX;
+      }
+      renderClickableAreas();
+    }
+    </script>
+</head>
+<body>
+<div id="helper" class="hidden">
+    <ul>
+        <li>
+            <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.00318 2.52632C8.76035 2.52632 10.1864 3.94105 10.1864 5.68421C10.1864 6.09474 10.1037 6.48 9.95725 6.84L11.8163 8.68421C12.7776 7.88842 13.5352 6.85895 14 5.68421C12.8986 2.91158 10.1801 0.947368 6.99682 0.947368C6.1055 0.947368 5.25239 1.10526 4.46294 1.38947L5.83811 2.75368C6.201 2.60842 6.58936 2.52632 7.00318 2.52632ZM0.636653 0.802105L2.08822 2.24211L2.38108 2.53263C1.32424 3.34737 0.496589 4.43368 0 5.68421C1.10141 8.45684 3.81992 10.4211 7.00318 10.4211C7.99 10.4211 8.93224 10.2316 9.79172 9.89053L10.0591 10.1558L11.9245 12L12.7331 11.1979L1.4452 0L0.636653 0.802105ZM4.15734 4.29474L5.14416 5.27368C5.11232 5.40632 5.09322 5.54526 5.09322 5.68421C5.09322 6.73263 5.94634 7.57895 7.00318 7.57895C7.14325 7.57895 7.28331 7.56 7.41701 7.52842L8.40382 8.50737C7.97726 8.71579 7.50614 8.8421 7.00318 8.8421C5.24602 8.8421 3.81992 7.42737 3.81992 5.68421C3.81992 5.18526 3.94725 4.71789 4.15734 4.29474V4.29474ZM6.90132 3.80211L8.90678 5.79158L8.91951 5.69053C8.91951 4.64211 8.06639 3.79579 7.00955 3.79579L6.90132 3.80211Z"
+                      fill="white"/>
+            </svg>
+            Hide interface (H)
+        </li>
+        <li>
+            <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5L5 1M1 5L5 9M1 5H12C13.1046 5 14 5.89543 14 7V11" stroke="white" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Restart (R)
+        </li>
+
+    </ul>
+</div>
+<div id="clickables"></div>
+<img id="content" src=""/>
+</body>
+</html>
